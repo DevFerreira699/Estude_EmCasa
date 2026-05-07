@@ -1,90 +1,112 @@
 <!DOCTYPE html> <!-- O DOCTYPE é uma declaração que informa ao navegador qual versão do HTML está sendo usada. -->
 <html lang="pt-BR"> <!--  O atributo lang="pt-BR" indica que o idioma principal do conteúdo é o português do Brasil. -->
-<head>  
-    <meta charset="UTF-8"> <!-- O charset="UTF-8" é uma declaração que define a codificação de caracteres usada no documento, garantindo que os caracteres sejam exibidos corretamente. -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- A meta tag viewport é usada para controlar a forma como o conteúdo é exibido em dispositivos móveis. 
+<head>
+    <meta charset="UTF-8">
+    <!-- O charset="UTF-8" é uma declaração que define a codificação de caracteres usada no documento, garantindo que os caracteres sejam exibidos corretamente. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A meta tag viewport é usada para controlar a forma como o conteúdo é exibido em dispositivos móveis. 
                                                                             O valor width=device-width define a largura da página para ser igual à largura da tela do dispositivo, 
                                                                             e initial-scale=1.0 define o nível de zoom inicial para 100%. -->
     <title>Meu Primeiro Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header> <!-- O header é uma seção de introdução ou um conjunto de navegação para o conteúdo do site. -->
+    <header id="header"> <!-- O header é uma seção de introdução ou um conjunto de navegação para o conteúdo do site. -->
         <h1>Aprendendo HTML</h1>
         <p>Vamos começar a entender todas as tags do HTML!</p>
     </header>
 
-    <main> <!-- O main é uma tag semântica que representa o conteúdo principal do documento. Ele deve conter o conteúdo que é diretamente relacionado ao tema central do site. -->
+    <main>
+        <!-- O main é uma tag semântica que representa o conteúdo principal do documento. Ele deve conter o conteúdo que é diretamente relacionado ao tema central do site. -->
 
-        <section> <!-- O section é uma tag semântica que representa uma seção genérica de um documento. Ele é usado para agrupar conteúdo relacionado, como um artigo, um capítulo ou uma parte de um site. -->
+        <section id="introducao">
+            <!-- O section é uma tag semântica que representa uma seção genérica de um documento. Ele é usado para agrupar conteúdo relacionado, como um artigo, um capítulo ou uma parte de um site. -->
             <h2>Bem vindo, este é o meu primeiro site</h2>
             <p>Este é um site de exemplo criado para <em>entender a estrutura HTML</em>.</p>
-            <p>Vamos aprender a criar um site do zero usando <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> e <abbr title="JavaScript">JS</abbr>.</p> <!-- A tag <em> é usada para enfatizar o texto, geralmente exibindo-o em itálico-->
-            <p>Aqui vamos criar toda a nossa <strong>estrutura principal do site</strong> !</p> <!-- A tag <strong> é usada para dar ênfase forte ao texto, geralmente exibindo-o em negrito. -->
+            <p>Vamos aprender a criar um site do zero usando <abbr title="HyperText Markup Language">HTML</abbr>, <abbr
+                    title="Cascading Style Sheets">CSS</abbr> e <abbr title="JavaScript">JS</abbr>.</p>
+            <!-- A tag <em> é usada para enfatizar o texto, geralmente exibindo-o em itálico-->
+            <p>Aqui vamos criar toda a nossa <strong>estrutura principal do site</strong> !</p>
+            <!-- A tag <strong> é usada para dar ênfase forte ao texto, geralmente exibindo-o em negrito. -->
         </section>
 
-        <section>
-            <h2> 1 - Como usar a TAG RADIO</h2> 
+        <section id="tagsradio">
+            <h2> 1 - Como usar a TAG RADIO</h2>
             <h3>Selecione seu carro favorito</h3>
             <p>Apenas uma opção pode ser selecionada.</p>
-            <form> <!-- A tag <form> é usada para criar um formulário HTML, que pode conter vários elementos de entrada, como campos de texto, botões de opção, caixas de seleção e outros controles interativos. -->
+            <form>
+                <!-- A tag <form> é usada para criar um formulário HTML, que pode conter vários elementos de entrada, como campos de texto, botões de opção, caixas de seleção e outros controles interativos. -->
 
                 <!-- A tag <input> é usada para criar campos de entrada em um formulário, permitindo que os usuários insiram dados. -->
 
                 <!--Aqui mostra a como utilizar a tag <input type="radio"> -->
-                <input type="radio" value="Onix" id="onix" name="carro"> <!-- A tag <input type="radio"> é usada para criar botões de opção, permitindo que os usuários selecionem apenas uma opção de um grupo. -->
-                    <label for="onix">Onix</label>
-                        <br>
-                <input type="radio" value="Gol" id="gol" name="carro"> <!-- O atributo value é usado para definir o valor que será enviado ao servidor quando o formulário for enviado, e o atributo id é usado para associar o botão de opção a um rótulo. -->
-                    <label for="gol">Gol</label>
-                        <br>
-                <input type="radio" value="Civic" id="civic" name="carro"> <!-- O atributo name é usado para agrupar os botões de opção, permitindo que apenas um seja selecionado dentro do grupo. -->
-                    <label for="civic">Civic</label>
-                        <br>
-                <input type="radio" value="Corolla" id="corolla" name="carro"> <!-- O atributo id é usado para associar o botão de opção a um rótulo, mas neste caso, ele não tem um valor definido, o que pode causar problemas de acessibilidade. -->
-                    <label for="corolla">Corolla</label>
-                        <br>
-                <input type="radio" value="Mustang" id="mustang" name="carro"> <!-- O atributo name é necessário para agrupar os botões de opção, permitindo que apenas um seja selecionado dentro do grupo. Sem ele, os botões de opção não funcionarão corretamente. -->
-                    <label for="mustang">Mustang</label> <!-- A tag <label> é usada para associar um rótulo a um elemento de formulário, como um botão de opção, melhorando a acessibilidade e a usabilidade do formulário. O atributo for é usado para associar o rótulo ao elemento de formulário correspondente. -->
+                <input type="radio" value="Onix" id="onix" name="carro">
+                <!-- A tag <input type="radio"> é usada para criar botões de opção, permitindo que os usuários selecionem apenas uma opção de um grupo. -->
+                <label for="onix">Onix</label>
+                <br>
+                <input type="radio" value="Gol" id="gol" name="carro">
+                <!-- O atributo value é usado para definir o valor que será enviado ao servidor quando o formulário for enviado, e o atributo id é usado para associar o botão de opção a um rótulo. -->
+                <label for="gol">Gol</label>
+                <br>
+                <input type="radio" value="Civic" id="civic" name="carro">
+                <!-- O atributo name é usado para agrupar os botões de opção, permitindo que apenas um seja selecionado dentro do grupo. -->
+                <label for="civic">Civic</label>
+                <br>
+                <input type="radio" value="Corolla" id="corolla" name="carro">
+                <!-- O atributo id é usado para associar o botão de opção a um rótulo, mas neste caso, ele não tem um valor definido, o que pode causar problemas de acessibilidade. -->
+                <label for="corolla">Corolla</label>
+                <br>
+                <input type="radio" value="Mustang" id="mustang" name="carro">
+                <!-- O atributo name é necessário para agrupar os botões de opção, permitindo que apenas um seja selecionado dentro do grupo. Sem ele, os botões de opção não funcionarão corretamente. -->
+                <label for="mustang">Mustang</label>
+                <!-- A tag <label> é usada para associar um rótulo a um elemento de formulário, como um botão de opção, melhorando a acessibilidade e a usabilidade do formulário. O atributo for é usado para associar o rótulo ao elemento de formulário correspondente. -->
 
             </form>
         </section>
 
-        <section>
+        <section id="textmultilinha">
             <h2>2 - Como usar a TAG TEXT e multilinha</h2>
             <h3>Insira seus dados</h3>
             <p>Por favor, preencha os campos abaixo:</p>
-            <form> 
-                <input type="text" placeholder="Nome"><br> <!-- A tag <input type="text"> é usada para criar um campo de entrada de texto, permitindo que os usuários insiram informações em um formulário. -->
-                <input type="text" placeholder="Email"><br> <!-- O atributo placeholder é usado para fornecer uma dica ou exemplo de texto dentro do campo de entrada, indicando ao usuário o tipo de informação que deve ser inserida. -->
+            <form>
+                <input type="text" placeholder="Nome"><br>
+                <!-- A tag <input type="text"> é usada para criar um campo de entrada de texto, permitindo que os usuários insiram informações em um formulário. -->
+                <input type="text" placeholder="Email"><br>
+                <!-- O atributo placeholder é usado para fornecer uma dica ou exemplo de texto dentro do campo de entrada, indicando ao usuário o tipo de informação que deve ser inserida. -->
                 <input type="text" placeholder="Telefone"><br>
                 <input type="text" placeholder="Endereço"><br>
                 <br>
-    
-                <textarea placeholder="Escreva uma breve descrição sobre você"></textarea> <!-- A tag <textarea> é usada para criar um campo de texto multilinha em um formulário HTML, permitindo que os usuários insiram uma quantidade maior de texto. O atributo placeholder é usado para fornecer uma dica ou exemplo de texto dentro do campo de texto, indicando ao usuário o tipo de informação que deve ser inserida. -->
+
+                <textarea placeholder="Escreva uma breve descrição sobre você"></textarea>
+                <!-- A tag <textarea> é usada para criar um campo de texto multilinha em um formulário HTML, permitindo que os usuários insiram uma quantidade maior de texto. O atributo placeholder é usado para fornecer uma dica ou exemplo de texto dentro do campo de texto, indicando ao usuário o tipo de informação que deve ser inserida. -->
 
         </section>
 
-        <section>
+        <section id="login">
             <h2>3 - Como usar cirar um input de senha e email</h2>
             <h3> Escolha uma senha e email </h3>
             <p> Voce precisa escolher uma senha segura e um email válido </p>
             <form>
-                <input type="email" placeholder="Digite seu email"> <!-- A tag <input type="email"> é usada para criar um campo de entrada de email, permitindo que os usuários insiram um endereço de email válido. O navegador pode validar automaticamente o formato do email e fornecer feedback ao usuário. -->
+                <input type="email" placeholder="Digite seu email"> <br>
+                <!-- A tag <input type="email"> é usada para criar um campo de entrada de email, permitindo que os usuários insiram um endereço de email válido. O navegador pode validar automaticamente o formato do email e fornecer feedback ao usuário. -->
 
-                <input type="password" placeholder="Digite sua senha"> <!-- A tag <input type="password"> é usada para criar um campo de entrada de senha, onde os caracteres digitados são ocultados por asteriscos ou pontos para proteger a privacidade do usuário. -->
-                
+                <input type="password" placeholder="Digite sua senha">
+                <!-- A tag <input type="password"> é usada para criar um campo de entrada de senha, onde os caracteres digitados são ocultados por asteriscos ou pontos para proteger a privacidade do usuário. -->
+
             </form>
         </section>
 
-        <section>  
+        <section>
             <h2> Como inserir uma data em html</h2>
             <h3> Selecione a data do seu aniversário </h3>
             <p> aqui voce pode escrever ou ir pelo calendário para a escolha da sua data especificada </p>
             <form>
-                <input type="date"> <!-- A tag <input type="date"> é usada para criar um campo de entrada de data, permitindo que os usuários selecionem uma data a partir de um calendário ou digitem uma data no formato especificado. -->
+                <input type="date">
+                <!-- A tag <input type="date"> é usada para criar um campo de entrada de data, permitindo que os usuários selecionem uma data a partir de um calendário ou digitem uma data no formato especificado. -->
             </form>
         </section>
 
@@ -93,12 +115,13 @@
             <h3> Confirme suas preferências </h3>
             <p> Por favor, marque as opções que deseja selecionar </p>
             <form>
-                <input type="checkbox" id="Aceito" name="aceito"> <!-- A tag <input type="checkbox"> é usada para criar uma caixa de seleção, permitindo que os usuários selecionem uma ou mais opções de um           conjunto. O atributo id é usado para associar a caixa de seleção a um rótulo, e o atributo name é usado para identificar o grupo de caixas de seleção. -->
-                    <label for="Aceito">Aceito os termos e condições</label><br>
+                <input type="checkbox" id="Aceito" name="aceito">
+                <!-- A tag <input type="checkbox"> é usada para criar uma caixa de seleção, permitindo que os usuários selecionem uma ou mais opções de um           conjunto. O atributo id é usado para associar a caixa de seleção a um rótulo, e o atributo name é usado para identificar o grupo de caixas de seleção. -->
+                <label for="Aceito">Aceito os termos e condições</label><br>
                 <input type="checkbox" id="Recuso" name="recuso">
-                    <label for="Recuso">Recuso os termos e condições</label><br> 
+                <label for="Recuso">Recuso os termos e condições</label><br>
                 <input type="checkbox" id="Analise" name="analise">
-                    <label for="Analise">Solicito analise dos termos e codições</label><br>
+                <label for="Analise">Solicito analise dos termos e codições</label><br>
             </form>
         </section>
         <section>
@@ -106,8 +129,9 @@
             <h3>Selecione um arquivo </h3>
             <p>Por favor, selecione um arquivo do seu dispositivo </p>
             <form>
-                <input type="file"> <!-- A tag <input type="file"> é usada para criar um campo de entrada de arquivo, permitindo que os usuários selecionem um arquivo do seu dispositivo para ser enviado ao servidor. -->
-               
+                <input type="file">
+                <!-- A tag <input type="file"> é usada para criar um campo de entrada de arquivo, permitindo que os usuários selecionem um arquivo do seu dispositivo para ser enviado ao servidor. -->
+
             </form>
         </section>
 
@@ -116,7 +140,8 @@
             <h3>Selecione uma opção</h3>
             <p>Selecione uma das brands de calçados: </p>
             <form>
-                <select name="Opcãos"> <!-- A tag <select> é usada para criar um menu suspenso (dropdown) em um formulário HTML, permitindo que os usuários selecionem uma opção de uma lista. O atributo name é usado para identificar o campo de seleção quando o formulário é enviado. -->
+                <select name="Opcãos">
+                    <!-- A tag <select> é usada para criar um menu suspenso (dropdown) em um formulário HTML, permitindo que os usuários selecionem uma opção de uma lista. O atributo name é usado para identificar o campo de seleção quando o formulário é enviado. -->
                     <option value="Nike">Nike </option>
                     <option value="Adidas">Adidas</option>
                     <option value="Puma">Puma</option>
@@ -133,11 +158,15 @@
             <h3> Visualização da Imagem </h3>
             <p> Rapaz e time do coração</p>
             <form>
-                <input type="image" src="https://avatars.githubusercontent.com/u/263688558?v=4" alt="Rapaz atraente kkk"> <!-- A tag <input type="image"> é usada para criar um botão de envio de formulário que exibe uma imagem em vez de um botão tradicional. O atributo src é usado para especificar o caminho da imagem a ser exibida, e o atributo alt é usado para fornecer um texto alternativo que descreve a imagem, melhorando a acessibilidade do formulário. -->
+                <input type="image" src="https://avatars.githubusercontent.com/u/263688558?v=4"
+                    alt="Rapaz atraente kkk">
+                <!-- A tag <input type="image"> é usada para criar um botão de envio de formulário que exibe uma imagem em vez de um botão tradicional. O atributo src é usado para especificar o caminho da imagem a ser exibida, e o atributo alt é usado para fornecer um texto alternativo que descreve a imagem, melhorando a acessibilidade do formulário. -->
 
-                <figure> <!-- A tag <figure> é usada para agrupar conteúdo de mídia, como imagens, gráficos ou diagramas, junto com uma legenda. Ela é frequentemente usada para fornecer contexto adicional ou explicações sobre a mídia exibida. -->
+                <figure>
+                    <!-- A tag <figure> é usada para agrupar conteúdo de mídia, como imagens, gráficos ou diagramas, junto com uma legenda. Ela é frequentemente usada para fornecer contexto adicional ou explicações sobre a mídia exibida. -->
                     <img src="./assets/lakers.jpg" alt="Melhor time do mundo">
-                    <figcaption>Lakers, o melhor time do mundo</figcaption> <!-- A tag <figcaption> é usada para fornecer uma legenda ou descrição para o conteúdo de mídia agrupado dentro da tag <figure>. Ela é usada para explicar ou contextualizar a imagem, gráfico ou diagrama exibido. -->
+                    <figcaption>Lakers, o melhor time do mundo</figcaption>
+                    <!-- A tag <figcaption> é usada para fornecer uma legenda ou descrição para o conteúdo de mídia agrupado dentro da tag <figure>. Ela é usada para explicar ou contextualizar a imagem, gráfico ou diagrama exibido. -->
                 </figure>
             </form>
         </section>
@@ -155,20 +184,23 @@
             <h2>Como fazer uma tabela em html</h2>
             <h3>tabela de preços</h3>
             <p>Abaixo está uma tabela de preços para nossos produtos:</p>
-            <table border="5"> <!-- A tag <table> é usada para criar uma tabela em HTML, permitindo organizar dados em linhas e colunas. O atributo border é usado para definir  a largura da borda da tabela, mas é recomendado usar CSS para estilizar a tabela em vez de atributos HTML. -->
+            <table border="5">
+                <!-- A tag <table> é usada para criar uma tabela em HTML, permitindo organizar dados em linhas e colunas. O atributo border é usado para definir  a largura da borda da tabela, mas é recomendado usar CSS para estilizar a tabela em vez de atributos HTML. -->
                 <thead>
                     <tr> <!-- A tag <tr> é usada para definir uma linha em uma tabela HTML. Ela é usada dentro das tags <thead>, <tbody> ou <tfoot> para agrupar células de dados ou células de cabeçalho. -->
                         <th>Produto</th>
                         <th>Preço</th>
                         <th>Tamanho</th>
-                        <th>gênero</th> 
-                </thead> <!-- A tag <thead> é usada para agrupar o conteúdo do cabeçalho de uma tabela, geralmente contendo as células de cabeçalho definidas com a tag <th>. Ela ajuda a organizar e estruturar a tabela, melhorando a legibilidade e a acessibilidade. -->
+                        <th>gênero</th>
+                </thead>
+                <!-- A tag <thead> é usada para agrupar o conteúdo do cabeçalho de uma tabela, geralmente contendo as células de cabeçalho definidas com a tag <th>. Ela ajuda a organizar e estruturar a tabela, melhorando a legibilidade e a acessibilidade. -->
                 <tbody>
                     <tr>
                         <td>Calçado</td>
                         <td>R$ 100,00</td>
                         <td>42</td>
-                        <td>Masculino</td> <!-- A tag <td> é usada para definir uma célula de dados em uma tabela HTML. Ela é usada dentro das tags <tr> para agrupar os dados em linhas e colunas. -->
+                        <td>Masculino</td>
+                        <!-- A tag <td> é usada para definir uma célula de dados em uma tabela HTML. Ela é usada dentro das tags <tr> para agrupar os dados em linhas e colunas. -->
                     </tr>
                     <tr>
                         <td>Camiseta</td>
@@ -187,69 +219,82 @@
                         <td>R$ 120,00</td>
                         <td>M</td>
                         <td>Feminino</td>
-                </tbody> <!-- A tag <tbody> é usada para agrupar o conteúdo do corpo de uma tabela, geralmente contendo as células de dados definidas com a tag <td>. Ela ajuda a organizar e estruturar a tabela, melhorando a legibilidade e a acessibilidade. -->
+                </tbody>
+                <!-- A tag <tbody> é usada para agrupar o conteúdo do corpo de uma tabela, geralmente contendo as células de dados definidas com a tag <td>. Ela ajuda a organizar e estruturar a tabela, melhorando a legibilidade e a acessibilidade. -->
 
-                <tfoot> <!-- A tag <tfoot> é usada para agrupar o conteúdo do rodapé de uma tabela, geralmente contendo células de rodapé definidas com a tag <td>. Ela é usada para fornecer informações adicionais ou resumos relacionados aos dados da tabela. -->
-                        <tr>
-                            <td colspan="4">Todos os preços estão sujeitos a alterações sem aviso prévio.</td> <!-- O atributo colspan é usado para especificar o número de colunas que uma célula deve abranger em uma tabela. Neste caso, a célula se estende por todas as quatro colunas da tabela. -->
-                        </tr>
+                <tfoot>
+                    <!-- A tag <tfoot> é usada para agrupar o conteúdo do rodapé de uma tabela, geralmente contendo células de rodapé definidas com a tag <td>. Ela é usada para fornecer informações adicionais ou resumos relacionados aos dados da tabela. -->
+                    <tr>
+                        <td colspan="4">Todos os preços estão sujeitos a alterações sem aviso prévio.</td>
+                        <!-- O atributo colspan é usado para especificar o número de colunas que uma célula deve abranger em uma tabela. Neste caso, a célula se estende por todas as quatro colunas da tabela. -->
+                    </tr>
                 </tfoot>
-            </table> 
+            </table>
         </section>
         <section>
             <h2> Agora vamos inserir listas</h2>
             <h3>Exemplos de Listas</h3>
             <p>Abaixo estão exemplos de listas ordenadas e não ordenadas:</p>
             <h4>Lista Ordenada</h4>
-                <ol> <!-- A tag <ol> é usada para criar uma lista ordenada em HTML, onde os itens são numerados automaticamente. Cada item da lista é definido com a tag <li>. -->
+            <ol> <!-- A tag <ol> é usada para criar uma lista ordenada em HTML, onde os itens são numerados automaticamente. Cada item da lista é definido com a tag <li>. -->
+                <li>Primeiro item</li>
+                <li>Segundo item</li>
+                <li>Terceiro item</li>
+                <!-- A tag <li> é usada para definir um item de lista em HTML, seja em uma lista ordenada (<ol>) ou em uma lista não ordenada (<ul>). Cada item da lista é representado por uma tag <li>. -->
+            </ol>
+            <h4>Lista Não Ordenada</h4>
+            <details>
+                <!-- A tag <details> é usada para criar um elemento interativo que pode ser expandido ou recolhido pelo usuário. Ele é frequentemente usado para ocultar ou mostrar informações adicionais, como detalhes de um item ou uma seção de conteúdo. -->
+                <summary>Click para ver mais</summary>
+                <!-- A tag <summary> é usada para fornecer um título ou resumo para o conteúdo oculto dentro da tag <details>. Ele é exibido como um elemento clicável que, quando clicado, expande ou recolhe o conteúdo associado. -->
+                <ul>
                     <li>Primeiro item</li>
                     <li>Segundo item</li>
-                    <li>Terceiro item</li> <!-- A tag <li> é usada para definir um item de lista em HTML, seja em uma lista ordenada (<ol>) ou em uma lista não ordenada (<ul>). Cada item da lista é representado por uma tag <li>. -->
-                </ol>
-            <h4>Lista Não Ordenada</h4>
-                <details> <!-- A tag <details> é usada para criar um elemento interativo que pode ser expandido ou recolhido pelo usuário. Ele é frequentemente usado para ocultar ou mostrar informações adicionais, como detalhes de um item ou uma seção de conteúdo. -->    
-                    <summary>Click para ver mais</summary> <!-- A tag <summary> é usada para fornecer um título ou resumo para o conteúdo oculto dentro da tag <details>. Ele é exibido como um elemento clicável que, quando clicado, expande ou recolhe o conteúdo associado. -->
-                    <ul>
-                        <li>Primeiro item</li>
-                        <li>Segundo item</li>
-                        <li>Terceiro item</li>
-                    </ul> <!-- A tag <ul> é usada para criar uma lista não ordenada em HTML, onde os itens são marcados com símbolos (como pontos ou círculos) em vez de serem numerados. Cada item da lista é definido com a tag <li>. -->
-                </details>
+                    <li>Terceiro item</li>
+                </ul>
+                <!-- A tag <ul> é usada para criar uma lista não ordenada em HTML, onde os itens são marcados com símbolos (como pontos ou círculos) em vez de serem numerados. Cada item da lista é definido com a tag <li>. -->
+            </details>
         </section>
         <section>
             <h2>Como fazer um formulário</h2>
             <h3>Insira seus dados</h3>
             <p>Por favor, preencha os campos abaixo:</p>
             <form>
-                <fieldset> 
-                    <legend>Dados Pessoais</legend> <!-- A tag <legend> é usada para fornecer um título ou descrição para o conteúdo agrupado dentro da tag <fieldset>. Ela é exibida como um rótulo para o grupo de elementos, ajudando a identificar e organizar visualmente os campos do formulário. -->
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <!-- A tag <legend> é usada para fornecer um título ou descrição para o conteúdo agrupado dentro da tag <fieldset>. Ela é exibida como um rótulo para o grupo de elementos, ajudando a identificar e organizar visualmente os campos do formulário. -->
 
                     <label for="nome">Nome:</label>
-                        <input type="text" id="nome"><br>
+                    <input type="text" id="nome"><br>
 
                     <label for="email">Email:</label>
-                        <input type="email" id="email"><br>
+                    <input type="email" id="email"><br>
 
                     <label for="telefone">Telefone:</label>
-                        <input type="text" id="telefone"><br>
+                    <input type="text" id="telefone"><br>
 
                     <label for="endereco">Endereço:</label>
-                        <input type="text" id="endereco"><br>
+                    <input type="text" id="endereco"><br>
                     <br>
-                    <textarea  rows="4" cols="50" placeholder="Escreva uma breve descrição sobre você"></textarea><br>
+                    <textarea rows="4" cols="50" placeholder="Escreva uma breve descrição sobre você"></textarea><br>
 
-                    <button onclick="alert('Formulário enviado com sucesso!')">Enviar</button> <!-- A tag <button> é usada para criar um botão interativo em um formulário HTML. O atributo onclick é usado para definir uma ação a ser executada quando o botão é clicado, como exibir uma mensagem de alerta ou enviar o formulário. -->
-                        
-                </fieldset> <!-- A tag <fieldset> é usada para agrupar elementos relacionados em um formulário HTML, criando uma seção visualmente distinta. Ela é frequentemente usada para organizar campos de entrada, como dados pessoais, informações de pagamento ou preferências do usuário. -->
+                    <button onclick="alert('Formulário enviado com sucesso!')">Enviar</button>
+                    <!-- A tag <button> é usada para criar um botão interativo em um formulário HTML. O atributo onclick é usado para definir uma ação a ser executada quando o botão é clicado, como exibir uma mensagem de alerta ou enviar o formulário. -->
+
+                </fieldset>
+                <!-- A tag <fieldset> é usada para agrupar elementos relacionados em um formulário HTML, criando uma seção visualmente distinta. Ela é frequentemente usada para organizar campos de entrada, como dados pessoais, informações de pagamento ou preferências do usuário. -->
             </form>
         </section>
 
     </main>
 
-    <footer> <!-- O footer é uma seção de rodapé que geralmente contém informações de contato, direitos autorais ou links para políticas de privacidade. -->
+    <footer>
+        <!-- O footer é uma seção de rodapé que geralmente contém informações de contato, direitos autorais ou links para políticas de privacidade. -->
         <p>Para ter acesso outras paginas html, use <a href="contato.html" target="_blank">contato</a>.</p>
-        <p>Caso queira aprender mais sobre HTML ou outras linguagens de programação, visite <a href="https://coddy.tech" target="_blank"> <strong>aprender jogando</strong></a>.</p>
+        <p>Caso queira aprender mais sobre HTML ou outras linguagens de programação, visite <a href="https://coddy.tech"
+                target="_blank"> <strong>aprender jogando</strong></a>.</p>
         <p>&copy; 2026 Meu Site. Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>

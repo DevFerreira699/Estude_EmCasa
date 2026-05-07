@@ -1,0 +1,40 @@
+#header{
+    background-color: #3d9204; /* Cor de fundo do header */
+    border-radius: 10px; /* Bordas arredondadas para o header */
+    padding: 20px; /* Espaçamento interno do header */
+    margin: 2px;
+    text-align: center; /* Centraliza o texto dentro do header */
+}
+
+#introducao{
+    background-color: #646464; /* Cor de fundo da seção de introdução */
+    border-radius: 10px;
+    padding: 20px; /* Espaçamento interno da seção de introdução */
+    margin: 2px; /* Margem ao redor da seção de introdução */
+    text-align: center; /* Centraliza o texto dentro da seção de introdução */
+}
+
+#tagsradio{
+    background-color: #646464; /* Cor de fundo da seção de tags radio */
+    border-radius: 10px; /* Bordas arredondadas para a seção de tags radio */
+    padding: 20px; /* Espaçamento interno da seção de tags radio */
+    margin: 2px; /* Margem ao redor da seção de tags radio */
+    text-align: center; /* Centraliza o texto dentro da seção de tags radio */
+}
+
+#textmultilinha{
+    background-color: #646464; /* Cor de fundo da seção de texto multilinha */
+    border-radius: 10px; /* Bordas arredondadas para a seção de texto multilinha */
+    padding: 20px; /* Espaçamento interno da seção de texto multilinha */
+    margin: 2px; /* Margem ao redor da seção de texto multilinha */
+    text-align: center; /* Centraliza o texto dentro da seção de texto multilinha */
+}
+
+#login{
+    background-color: #646464; /* Cor de fundo da seção de login */
+    border-radius: 10px; /* Bordas arredondadas para a seção de login */
+    padding: 20px; /* Espaçamento interno da seção de login */
+    margin: 2px; /* Margem ao redor da seção de login */
+    text-align: center; /* Centraliza o texto dentro da seção de login */
+    
+}
