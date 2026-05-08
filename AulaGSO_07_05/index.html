@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USB Boot Creator - Sistema de Pendrives Bootáveis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💾 USB Boot Creator</h1>
+            <p>Crie pendrives bootáveis para diversos sistemas operacionais</p>
+        </div>
+
+        <div class="content">
+            <div class="panel">
+                <h2>📀 1. Selecione a ISO</h2>
+                <div class="form-group">
+                    <label>Sistema Operacional</label>
+                    <div class="os-list" id="osList"></div>
+                </div>
+                <div class="form-group">
+                    <label>Ou carregue sua própria ISO</label>
+                    <input type="file" id="isoFile" accept=".iso">
+                </div>
+                <div class="form-group">
+                    <label>Nome do Volume (opcional)</label>
+                    <input type="text" id="volumeName" placeholder="Ex: UBUNTU_BOOT">
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>💿 2. Selecione o Pendrive</h2>
+                <div class="usb-list" id="usbList">
+                    <div class="alert">🔍 Clique em "Detectar USBs" para listar os dispositivos</div>
+                </div>
+                <button class="btn" id="detectBtn">🔍 Detectar USBs</button>
+                <button class="btn" id="createBtn" disabled>⚡ Criar Pendrive Bootável</button>
+
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill">0%</div>
+                    </div>
+                </div>
+
+                <div id="status" class="status"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
